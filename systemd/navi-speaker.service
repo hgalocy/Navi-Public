@@ -1,0 +1,27 @@
+[Unit]
+Description=Navi Piper Speaker
+PartOf=navi.target
+Conflicts=navi-client.service
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=notify
+NotifyAccess=main
+WorkingDirectory=%h/Navi
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-%h/.config/navi/services.env
+ExecStart=/usr/bin/python3 -m Services speaker
+Restart=on-failure
+RestartSec=3
+WatchdogSec=10
+TimeoutStartSec=45
+TimeoutStopSec=8
+TimeoutAbortSec=5
+KillMode=control-group
+UMask=0077
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=navi.target

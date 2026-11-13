@@ -1,0 +1,39 @@
+# Python environments and generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Runtime logs, audio captures, and discovery caches
+Logging/logs/
+*.log
+*.log.[0-9]*
+*.wav
+*.pcm
+.navi_server_ip
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+services.env
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini

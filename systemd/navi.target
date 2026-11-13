@@ -1,0 +1,6 @@
+[Unit]
+Description=Navi supervised components
+Wants=navi-face.service navi-listener.service navi-speaker.service navi-coordinator.service
+
+[Install]
+WantedBy=default.target

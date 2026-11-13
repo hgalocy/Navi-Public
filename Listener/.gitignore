@@ -1,0 +1,7 @@
+.venv/
+logs/
+models/*
+!models/hey_navi_v3.onnx
+!models/hey_navi_v3.sha256
+!models/hey_navi_v3.manifest.json
+!models/README.md

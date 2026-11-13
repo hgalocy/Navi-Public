@@ -1,0 +1,342 @@
+{
+  "model_file": "hey_navi_v3.onnx",
+  "sha256": "68abe08532063dca36a16d7630d6334001ebe8765e08e7b4b8cb2d7d061b3b3e",
+  "wake_phrase": "Hey Navi",
+  "preferred_tts_text": "Hey Navi.",
+  "accepted_pronunciations": [
+    {
+      "id": 1,
+      "text": "Hey Navi."
+    },
+    {
+      "id": 2,
+      "text": "Hey Nahvi."
+    },
+    {
+      "id": 3,
+      "text": "Hey, nah vee."
+    }
+  ],
+  "backend": "onnx",
+  "threshold": 0.995,
+  "cooldown_seconds": 2.0,
+  "sample_rate": 16000,
+  "channels": 1,
+  "frame_samples": 1280,
+  "onnx_opset": 13,
+  "onnx_ir_version": 7,
+  "target": {
+    "openwakeword": "0.6.0",
+    "onnxruntime": "1.18.1",
+    "python": "3.8.10",
+    "architecture": "aarch64"
+  },
+  "training_versions": {
+    "openwakeword": {
+      "repository": "https://github.com/dscripka/openWakeWord.git",
+      "commit": "c8ef6912c5feccf1037b852d9bc6c7ed644135ba",
+      "tag": "v0.6.0"
+    },
+    "piper": {
+      "repository": "https://github.com/rhasspy/piper-sample-generator.git",
+      "commit": "195e3bd967d54589c2137c9de2b22ad526ba6b6f",
+      "tag": "v2.0.0",
+      "checkpoint": "https://github.com/rhasspy/piper-sample-generator/releases/download/v2.0.0/en_US-libritts_r-medium.pt",
+      "checkpoint_sha256": "e95ee53770bf598c354a6e6dbfc95ccb259aeeb501d35a86be8a767429ab0ff6"
+    },
+    "feature_models": {
+      "melspectrogram.onnx": {
+        "url": "https://github.com/dscripka/openWakeWord/releases/download/v0.5.1/melspectrogram.onnx",
+        "sha256": "ba2b0e0f8b7b875369a2c89cb13360ff53bac436f2895cced9f479fa65eb176f"
+      },
+      "embedding_model.onnx": {
+        "url": "https://github.com/dscripka/openWakeWord/releases/download/v0.5.1/embedding_model.onnx",
+        "sha256": "70d164290c1d095d1d4ee149bc5e00543250a7316b59f31d056cff7bd3075c1f"
+      }
+    },
+    "esc50": {
+      "repository": "https://github.com/karolpiczak/ESC-50.git",
+      "commit": "33c8ce9eb2cf0b1c2f8bcf322eb349b6be34dbb6"
+    },
+    "negative_features": {
+      "repository": "davidscripka/openwakeword_features",
+      "revision": "985bf1b47e7f19c07741af82bfe32d5a9dc56096",
+      "license": "CC-BY-NC-SA-4.0",
+      "files": {
+        "openwakeword_features_ACAV100M_2000_hrs_16bit.npy": "721a66d0682c65a1b5c1da0aa109409cede1d20e28b15235c344b000cbb7654f",
+        "validation_set_features.npy": "a56a8a0f8e0efb91900acc6de4c0cdf4c564842e8475a7d49b36c039e17a690f"
+      }
+    },
+    "librispeech": {
+      "url": "https://www.openslr.org/resources/12/test-clean.tar.gz",
+      "md5": "32fa31d27d2e1cad72775fee3f4849a9",
+      "license": "CC-BY-4.0"
+    },
+    "training_python": "3.10",
+    "torch": "2.7.1+cu128",
+    "torchaudio": "2.7.1+cu128",
+    "export": {
+      "format": "onnx",
+      "opset": 13,
+      "max_ir_version": 10
+    },
+    "target": {
+      "openwakeword": "0.6.0",
+      "onnxruntime": "1.18.1",
+      "python": "3.8.10",
+      "architecture": "aarch64"
+    }
+  },
+  "training_config_sha256": "16f06cf5ae67d51e7886a1bbbe043f575f10f14579fa5893bc2ce59d2966ebde",
+  "training_device": "cpu",
+  "dataset_manifest_sha256": "add50efdc70753efd6006cf84c6b8a17e1409f7418e89a8529974109d4ad9cfd",
+  "validation": {
+    "threshold": 0.995,
+    "cooldown_seconds": 2.0,
+    "positive_clips": 2000,
+    "detected_positive_clips": 977,
+    "recall": 0.4885,
+    "negative_clips": 4792,
+    "false_positive_clips": 22,
+    "false_detections": 22,
+    "negative_audio_hours": 6.587352864583336,
+    "false_detections_per_hour": 3.339733038787432,
+    "zero_event_95pct_upper_bound_per_hour": null,
+    "categories": {
+      "background": {
+        "clips": 400,
+        "detected_clips": 0,
+        "events": 0,
+        "seconds": 2000.0
+      },
+      "hey_navi_variant_3": {
+        "clips": 400,
+        "detected_clips": 184,
+        "events": 184,
+        "seconds": 1600.0
+      },
+      "hey_navi_variant_2": {
+        "clips": 400,
+        "detected_clips": 227,
+        "events": 227,
+        "seconds": 1600.0
+      },
+      "hey_navi_variant_1": {
+        "clips": 1200,
+        "detected_clips": 566,
+        "events": 566,
+        "seconds": 4800.0
+      },
+      "synthetic_conversation": {
+        "clips": 1643,
+        "detected_clips": 1,
+        "events": 1,
+        "seconds": 6572.0
+      },
+      "similar_phrase": {
+        "clips": 1239,
+        "detected_clips": 19,
+        "events": 19,
+        "seconds": 4956.0
+      },
+      "hey_natalie": {
+        "clips": 59,
+        "detected_clips": 1,
+        "events": 1,
+        "seconds": 236.0
+      },
+      "hey_navy": {
+        "clips": 59,
+        "detected_clips": 1,
+        "events": 1,
+        "seconds": 236.0
+      },
+      "real_read_speech": {
+        "clips": 1392,
+        "detected_clips": 0,
+        "events": 0,
+        "seconds": 9714.4703125
+      }
+    }
+  },
+  "threshold_selection": {
+    "target_categories": [
+      "background",
+      "real_read_speech",
+      "synthetic_conversation"
+    ],
+    "target_rate": 0.2,
+    "ordinary_validation_result": {
+      "threshold": 0.995,
+      "cooldown_seconds": 2.0,
+      "positive_clips": 2000,
+      "detected_positive_clips": 977,
+      "recall": 0.4885,
+      "negative_clips": 3435,
+      "false_positive_clips": 1,
+      "false_detections": 1,
+      "negative_audio_hours": 5.079575086805564,
+      "false_detections_per_hour": 0.1968668604973568,
+      "zero_event_95pct_upper_bound_per_hour": null,
+      "categories": {
+        "background": {
+          "clips": 400,
+          "detected_clips": 0,
+          "events": 0,
+          "seconds": 2000.0
+        },
+        "hey_navi_variant_3": {
+          "clips": 400,
+          "detected_clips": 184,
+          "events": 184,
+          "seconds": 1600.0
+        },
+        "hey_navi_variant_2": {
+          "clips": 400,
+          "detected_clips": 227,
+          "events": 227,
+          "seconds": 1600.0
+        },
+        "hey_navi_variant_1": {
+          "clips": 1200,
+          "detected_clips": 566,
+          "events": 566,
+          "seconds": 4800.0
+        },
+        "synthetic_conversation": {
+          "clips": 1643,
+          "detected_clips": 1,
+          "events": 1,
+          "seconds": 6572.0
+        },
+        "real_read_speech": {
+          "clips": 1392,
+          "detected_clips": 0,
+          "events": 0,
+          "seconds": 9714.4703125
+        }
+      }
+    },
+    "combined_negative_target_met": false
+  },
+  "held_out_test": {
+    "threshold": 0.995,
+    "cooldown_seconds": 2.0,
+    "positive_clips": 2000,
+    "detected_positive_clips": 954,
+    "recall": 0.477,
+    "negative_clips": 4625,
+    "false_positive_clips": 18,
+    "false_detections": 18,
+    "negative_audio_hours": 6.58972508680554,
+    "false_detections_per_hour": 2.7315251794101396,
+    "zero_event_95pct_upper_bound_per_hour": null,
+    "categories": {
+      "background": {
+        "clips": 397,
+        "detected_clips": 0,
+        "events": 0,
+        "seconds": 1985.0
+      },
+      "hey_navi_variant_1": {
+        "clips": 1200,
+        "detected_clips": 540,
+        "events": 540,
+        "seconds": 4800.0
+      },
+      "hey_navi_variant_3": {
+        "clips": 400,
+        "detected_clips": 221,
+        "events": 221,
+        "seconds": 1600.0
+      },
+      "hey_navi_variant_2": {
+        "clips": 400,
+        "detected_clips": 193,
+        "events": 193,
+        "seconds": 1600.0
+      },
+      "synthetic_conversation": {
+        "clips": 1643,
+        "detected_clips": 0,
+        "events": 0,
+        "seconds": 6572.0
+      },
+      "similar_phrase": {
+        "clips": 1239,
+        "detected_clips": 18,
+        "events": 18,
+        "seconds": 4956.0
+      },
+      "hey_navy": {
+        "clips": 59,
+        "detected_clips": 0,
+        "events": 0,
+        "seconds": 236.0
+      },
+      "hey_natalie": {
+        "clips": 59,
+        "detected_clips": 0,
+        "events": 0,
+        "seconds": 236.0
+      },
+      "real_read_speech": {
+        "clips": 1228,
+        "detected_clips": 0,
+        "events": 0,
+        "seconds": 9738.010312500004
+      }
+    },
+    "model_sha256": "68abe08532063dca36a16d7630d6334001ebe8765e08e7b4b8cb2d7d061b3b3e",
+    "test_scores_sha256": "a95f6f2b4e698ddcb9974d667923576cf0c4a98d3b958bc32a5ad4bb6fcbe02f",
+    "frozen_selection_sha256": "a48b4241ac640edc08ca424d0fd20b1c021a61d1eabbceb9c5451c51a6005c5e",
+    "limitations": [
+      "Synthetic-positive accuracy does not establish live spoken recall",
+      "Finite independent clips are not a continuous deployment recording",
+      "Short negative duration limits false-alarm-rate precision"
+    ]
+  },
+  "training_metadata_sha256": "c362a530054bb9d7446619b82c2dc20079334292dc517c09989418b1294c8d74",
+  "held_out_ordinary_negatives": {
+    "categories": [
+      "background",
+      "real_read_speech",
+      "synthetic_conversation"
+    ],
+    "seconds": 18295.010312500002,
+    "false_detections": 0,
+    "false_detections_per_hour": 0.0
+  },
+  "evaluator_source_sha256": "c74355aa7d2d5e990949569ef898abc2f0a695316592251981328a29c6b50a3f",
+  "scoring_equivalence": {
+    "model_sha256": "68abe08532063dca36a16d7630d6334001ebe8765e08e7b4b8cb2d7d061b3b3e",
+    "validation_categories": [
+      "background",
+      "hey_navi_variant_1",
+      "hey_navy",
+      "real_read_speech"
+    ],
+    "compared_frames": 294,
+    "scores_bit_identical": true
+  },
+  "license_notice": "Research/noncommercial experiment. Training inputs include CC-BY-NC-SA-4.0 upstream features and CC-BY-NC-3.0 ESC-50; do not assume a permissive commercial model license.",
+  "sources": {
+    "piper": "https://github.com/rhasspy/piper-sample-generator/tree/v2.0.0",
+    "voice_data": "https://www.openslr.org/141/",
+    "backgrounds": "https://github.com/karolpiczak/ESC-50",
+    "generic_negatives": "https://huggingface.co/datasets/davidscripka/openwakeword_features",
+    "real_speech": "https://www.openslr.org/12/"
+  },
+  "live_spoken_acceptance": "Pending user test on Jetson",
+  "limitations": [
+    "Upstream auto_train internally normalizes its feature validation by 11.3 hours.",
+    "Its internal metrics are not held-out audio recall or cooldown-aware event rates.",
+    "Synthetic positives only; live spoken acceptance remains necessary.",
+    "ACAV precomputed features have no per-recording provenance available for independent duplicate auditing.",
+    "Synthetic-positive accuracy does not establish live spoken recall",
+    "Finite independent clips are not a continuous deployment recording",
+    "Short negative duration limits false-alarm-rate precision",
+    "Threshold calibrated on ordinary-negative validation categories; the combined challenge-heavy target was not met.",
+    "Noise/room stress recall and similar-phrase false activations limit this experimental model."
+  ]
+}
